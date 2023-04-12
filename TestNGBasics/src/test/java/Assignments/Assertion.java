@@ -48,8 +48,8 @@ WebDriver driver;
 	
 	@Test(priority = 3)
 	public void VerifyAllCheckboxChecked() {
-		WebElement ButtonTest3 = driver.findElement(By.xpath("//input[@id='button-two']"));
-		ButtonTest3.click();
+		WebElement selectAllCheckbox = driver.findElement(By.xpath("//input[@id='button-two']"));
+		selectAllCheckbox.click();
 		String checkbox = "check-box-one";
 		WebElement checkboxElement = driver.findElement(By.xpath("//input[@id='"+checkbox+"']"));
 		checkbox = "check-box-two";
