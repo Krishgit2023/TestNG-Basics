@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Method Test]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="Feature Test(failed)">
+    <classes>
+      <class name="package1.Testcase1">
+        <methods>
+          <include name="LaunchingAmazon"/>
+          <include name="VerifyRadioButton"/>
+        </methods>
+      </class> <!-- package1.Testcase1 -->
+    </classes>
+  </test> <!-- Feature Test(failed) -->
+</suite> <!-- Failed suite [Method Test] -->

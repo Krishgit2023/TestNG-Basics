@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Method Test">
+	<test name="Feature Test">
+		<classes>
+			<class name="package1.Testcase1">
+				<methods>
+					<include name="VerifyRadioButton"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

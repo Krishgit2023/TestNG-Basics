@@ -1,5 +1,6 @@
 package Assignments;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -58,7 +59,14 @@ WebDriver driver;
 		WebElement SubmitButton = driver.findElement(By.xpath("//input[@value='Submit']"));
 		SubmitButton.click();
 		
-		WebElement Message = driver.findElement(By.xpath("//div[@class='my-2']"));
+		WebElement loading = driver.findElement(By.xpath("//div[text()='Your request is under processing!']"));
+		
+		WebDriverWait Wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		
+		
+		//Wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[text()='Your request is under processing!']")));
+		Wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[text()='Form has been submitted successfully!']")));
+		WebElement Message = driver.findElement(By.xpath("//div[text()='Form has been submitted successfully!']"));
 		String expectedResult = "Form has been submitted successfully!";	
 		String actualResult = Message.getText();
 		System.out.println("Expected Result is : " +expectedResult);

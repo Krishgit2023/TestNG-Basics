@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Multiple Test" thread-count="5" parallel="tests">
+	<test name="Feature Test">
+		<classes>
+			<class name="package1.Annotations"></class>
+			<class name="package1.Testcase1"></class>
+		</classes>
+	</test>
+	
+	<test name="Smoke Test">
+		<classes>
+			<class name="package1.Testcase2"></class>
+			<class name="package1.FrameDemo"></class>
+			
+		</classes>
+	</test>
+</suite>
